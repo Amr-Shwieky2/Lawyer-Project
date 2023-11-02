@@ -1,0 +1,10 @@
+:root {
+  --main-color: #9c8a24; /* Define the color variable */
+  --main-white: #fff; /* Define the white color variable */
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}

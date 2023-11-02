@@ -1,0 +1,61 @@
+:root {
+  --main-color: #9c8a24; /* Define the color variable */
+  --main-white: #fff; /* Define the white color variable */
+}
+
+#main {
+  background-image: url("../../../public/image/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  justify-content: left; 
+  align-items: center; 
+}
+
+.content {
+  text-align: left; 
+  padding: 20px; 
+}
+
+#main h1 {
+  color: var(--main-white);
+  font-size: 2rem; 
+  margin: 0; 
+}
+
+.home-btn {
+  background-color: transparent;
+  border: 3px solid var(--main-color);
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 5px;
+  display: inline-block;
+  color: var(--main-white);
+  margin-bottom: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.home-btn a {
+  display: block;
+  color: var(--main-white);
+  text-decoration: none;
+}
+
+.home-btn:hover {
+  border-color: var(--main-white); 
+  color: var(--main-color);
+}
+
+.home-btn:hover a {
+  color:var(--main-color);
+  text-decoration: none;
+}
+
+
+
+

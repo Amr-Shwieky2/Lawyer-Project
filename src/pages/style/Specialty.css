@@ -1,0 +1,66 @@
+:root {
+  --main-color: #9c8a24; /* Define the color variable */
+  --main-white: #fff; /* Define the white color variable */
+  --form-color: #323232;
+}
+
+.Lawyer-inf {
+  height: 50%;
+  margin-top: 100px;
+  color: var(--main-color);
+}
+
+.custom-checkbox {
+  appearance: none; /* Remove default styles */
+  width: 18px; /* Set width for the custom checkbox */
+  height: 18px; /* Set height for the custom checkbox */
+  border: 1px solid var(--main-white); /* Add a border to the custom checkbox */
+  border-radius: 3px; /* Add rounded corners */
+  outline: none; /* Remove outline on focus */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.custom-checkbox:checked {
+  background-color: var(--main-color); /* Change the background color when checked */
+}
+
+.specialty-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px; 
+  border-radius: 5px;
+}
+
+.specialty-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.specialty-group {
+  margin-bottom: 10px;
+}
+
+.specialty-group input, .specialty-form textarea {
+  padding: 10px;
+  border: 1px solid var(--form-color);
+  background-color: transparent;
+  border-radius: 3px;
+  color: var(--main-white);
+ 
+}
+
+.specialty-group input{
+  box-sizing: border-box;
+  height: 40px; 
+}
+
+.specialty-group textarea {
+  height: 700px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+textarea::placeholder, input::placeholder {
+  color: var(--form-color);
+}
+

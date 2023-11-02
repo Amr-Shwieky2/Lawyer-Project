@@ -1,0 +1,22 @@
+#blog{
+    margin: 30px;
+}
+
+.says{
+    margin: auto;
+    color: var(--main-white);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+    margin-top: 100px;
+    
+}
+.says p{
+    color: #7b7a7a;
+}
+
+.icon-btw{
+    position: absolute;
+    left: 20%;
+}
