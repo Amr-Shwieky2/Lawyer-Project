@@ -1,7 +1,7 @@
 import React from 'react';
 import { VscQuote } from "react-icons/vsc";
-import { teamData } from '../data';
-import "./style/Blog.css"; 
+import { teamData } from '../../data';
+import "./Blog.css"; 
 
 function Blog() {
   return (

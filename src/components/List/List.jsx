@@ -1,6 +1,6 @@
 import React from 'react';
-import LawyerItem from './LawyerItem';
-import "../pages/style/Home.css";
+import "../../pages/Home/Home.css";
+import LawyerItem from './../LawyerItem/LawyerItem';
 
 function List({ items, setShowRequest }) {
   return (

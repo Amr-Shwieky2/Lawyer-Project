@@ -1,8 +1,8 @@
 import React from 'react';
-import { Services } from '../data';
-import "./style/Cases.css";
-import "../pages/style/Home.css";
+import { Services } from '../../data';
 import { Link } from 'react-router-dom';
+import "./Cases.css";
+import "../../pages/Home/Home.css";
 
 function Cases() {
     return (

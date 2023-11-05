@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { db } from '../config/firebase-config';
+import { db } from '../../config/firebase-config';
 import {
   addDoc,
   collection,
@@ -7,9 +7,9 @@ import {
   doc,
   getDocs,
 } from 'firebase/firestore';
-import '../pages/style/Dashboard.css';
-import '../components/style/HeroSection.css';
-import '../pages/style/Home.css';
+import '../../pages/Dashboard/Dashboard.css';
+import '../HeroSection/HeroSection.css';
+import '../../pages/Home/Home.css';
 
 function Admin() {
   const [updateData, setUpdateData] = useState(0);

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./style/HeroSection.css"
+import "../HeroSection/HeroSection.css"
 
 
 const Categories = ({ categories, filterItems }) => {

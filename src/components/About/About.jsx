@@ -1,6 +1,6 @@
 import React from 'react';
-import "./style/About.css";
-import "../pages/style/Home.css";
+import "./About.css";
+import "../../pages/Home/Home.css";
 import { BiColumns, BiSolidLandmark } from "react-icons/bi";
 import { GoCodeOfConduct, GoPerson } from "react-icons/go";
 import { Link } from 'react-router-dom';

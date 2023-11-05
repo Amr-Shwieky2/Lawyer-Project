@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Services,  inputFields } from '../data';
-import './style/Home.css';
+import { Services,  inputFields } from '../../data';
 import { useNavigate } from 'react-router-dom';
-import { db } from '../config/firebase-config';
+import { db } from '../../config/firebase-config';
 import { collection, addDoc } from 'firebase/firestore';
-import '../components/style/CallbackForm.css';
-import './style/Specialty.css';
-import '../components/style/About.css';
+import '../../components/CallbackForm/CallbackForm.css';
+import './Specialty.css';
+import '../Home/Home.css';
+import '../../components/About/About.css';
 
 function Specialty() {
   const LawyerDataRef = collection(db, 'LawyerData');

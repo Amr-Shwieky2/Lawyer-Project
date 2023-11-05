@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-
-import "../pages/style/LogIn.css"
 import { signInWithEmailAndPassword } from 'firebase/auth'; 
-import { auth, db } from '../config/firebase-config';
+import { auth, db } from '../../config/firebase-config';
 import { collection, query, where, getDocs } from 'firebase/firestore'; 
 import { useNavigate } from 'react-router-dom'; 
+import "../../pages/LogIn/LogIn.css"
 
 function SignInForm() {
   const [username, setUsername] = useState('');

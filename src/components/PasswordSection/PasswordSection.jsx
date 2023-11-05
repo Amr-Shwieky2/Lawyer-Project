@@ -1,5 +1,5 @@
 import React from 'react';
-import ConfirmPassword from './ConfirmPassword/ConfirmPassword';
+import ConfirmPassword from '../ConfirmPassword/ConfirmPassword';
 
 function PasswordSection({
   confirmPassword,

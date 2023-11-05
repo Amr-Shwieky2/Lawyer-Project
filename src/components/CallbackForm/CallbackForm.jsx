@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './style/CallbackForm.css';
-import './style/HeroSection.css';
-import { db } from '../config/firebase-config.js';
-import { collection, addDoc } from 'firebase/firestore'; // Added addDoc for writing data
-import { initialFormData } from '../data';
+import { db } from '../../config/firebase-config.js';
+import { collection, addDoc } from 'firebase/firestore'; 
+import { initialFormData } from '../../data.js';
+import './CallbackForm.css';
+import '../HeroSection/HeroSection.css';
 
 function CallbackForm({user}) {
   const [formData, setFormData] = useState(initialFormData);

@@ -1,5 +1,5 @@
 import React from 'react';
-import "../pages/style/LogIn.css"
+import "../../pages/LogIn/LogIn.css"
 
 function ToggleForm({ login, setLogin }) {
   return (

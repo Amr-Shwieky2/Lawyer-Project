@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../config/firebase-config';
-import { Services } from '../data';
-import List from '../components/List';
-import Categories from '../components/Categories';
-import CallbackForm from '../components/CallbackForm';
-import './style/Specialty.css';
+import { db } from '../../config/firebase-config';
+import { Services } from '../../data';
+import '../Specialty/Specialty.css';
+import CallbackForm from './../../components/CallbackForm/CallbackForm';
+import Categories from './../../components/Categories/Categories';
+import List from './../../components/List/List';
 
 const allCategories = ['all', ...Services.data.map((item) => item.category)];
 

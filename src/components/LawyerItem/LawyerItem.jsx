@@ -1,6 +1,6 @@
 import React from 'react';
-import "../pages/style/Home.css";
-import "./style/HeroSection.css"
+import "../../pages/Home/Home.css";
+import "../HeroSection/HeroSection.css"
 
 function LawyerItem({ OfficeName, Address, specialty, Experience, email, setShowRequest }) {
   return (

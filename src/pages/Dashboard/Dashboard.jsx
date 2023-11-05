@@ -1,14 +1,15 @@
 import React from 'react';
-import './style/Dashboard.css';
-import '../components/style/HeroSection.css';
-import '../pages/style/Home.css';
-import Admin from '../components/Admin';
-import { useUserData } from '../hooks/useUserData';
-import { usePasswordChange } from '../hooks/usePasswordChange';
-import { useSignOut } from '../hooks/useSignOut';
-import UserGreeting from '../components/UserGreeting';
-import PasswordSection from '../components/PasswordSection';
-import SignOutButton from './../components/SignOutButton';
+import './Dashboard.css';
+import '../../components/HeroSection/HeroSection.css';
+import '../Home/Home.css';
+import { useUserData } from '../../hooks/useUserData';
+import { usePasswordChange } from '../../hooks/usePasswordChange';
+import { useSignOut } from '../../hooks/useSignOut';
+import UserGreeting from './../../components/UserGreeting/UserGreeting';
+import PasswordSection from './../../components/PasswordSection/PasswordSection';
+import SignOutButton from './../../components/SignOutButton/SignOutButton';
+import Admin from './../../components/Admin/Admin';
+
 
 const Dashboard = () => {
   const { user, username, email } = useUserData();

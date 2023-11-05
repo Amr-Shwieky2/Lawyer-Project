@@ -1,12 +1,13 @@
 import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './pages/Home';
-import LogIn from './pages/LogIn';
-import NotFound from './pages/NotFound';
 import SharedLayout from './components/layout/SharedLayout';
-import Dashboard from './pages/Dashboard';
-import Specialty from './pages/Specialty';
-import Customer from './pages/Customer';
+import Home from './pages/Home/Home';
+import LogIn from './pages/LogIn/LogIn';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Specialty from './pages/Specialty/Specialty';
+import Customer from './pages/Customer/Customer';
+import NotFound from './pages/NotFound/NotFound';
+
 
 const Router = createBrowserRouter([
   {

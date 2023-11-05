@@ -1,5 +1,5 @@
 import React from 'react'
-import CallbackForm from './CallbackForm'
+import CallbackForm from '../CallbackForm/CallbackForm'
 import { AiOutlineInstagram,
          AiOutlineTwitter,
          AiFillYoutube,
@@ -8,7 +8,7 @@ import { AiOutlineInstagram,
 import { FiFacebook } from "react-icons/fi"
 import { FaLocationDot } from "react-icons/fa6"
 import { LuPhoneIncoming } from "react-icons/Lu"
-import "./layout/style.css"
+import "../layout/style.css"
 
 function Footer() {
   const currentYear = new Date().getFullYear();

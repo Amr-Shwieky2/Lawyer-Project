@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth, db } from '../config/firebase-config';
+import { auth, db } from '../../config/firebase-config';
 import { collection, addDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
-import ConfirmPassword from './ConfirmPassword/ConfirmPassword';
+import ConfirmPassword from '../ConfirmPassword/ConfirmPassword';
 
 function SignUpForm() {
   const [username, setUsername] = useState('');

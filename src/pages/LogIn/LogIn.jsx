@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './style/LogIn.css';
-import SignInForm from '../components/SignIn';
-import SignUpForm from '../components/SignUp';
-import ToggleForm from '../components/ToggleForm'; 
+import './LogIn.css';
+import SignInForm from '../../components/SignIn/SignIn';
+import SignUpForm from '../../components/SignUp/SignUp';
+import ToggleForm from '../../components/ToggleForm/ToggleForm'; 
 
 function LogIn() {
   const [login, setLogin] = useState(true);
