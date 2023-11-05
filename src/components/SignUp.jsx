@@ -1,34 +1,37 @@
 import React, { useState } from 'react';
-import "../pages/style/LogIn.css"
-import { createUserWithEmailAndPassword } from 'firebase/auth'; 
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../config/firebase-config';
-import { collection, addDoc } from 'firebase/firestore'; 
-import { useNavigate } from 'react-router-dom'; 
+import { collection, addDoc } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
+import ConfirmPassword from './ConfirmPassword/ConfirmPassword';
 
 function SignUpForm() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const history = useNavigate(); 
+  const [isPasswordMatch, setIsPasswordMatch] = useState(false);
+  const [passwordError, setPasswordError] = useState('');
+  const history = useNavigate();
 
   const usersRef = collection(db, 'users');
+
+  
 
   const handleSignUp = async (e) => {
     e.preventDefault();
 
-    if (password === confirmPassword) {
+    if (isPasswordMatch) {
       try {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 
-        
         await addDoc(usersRef, {
           email,
           username,
         });
 
         // Redirect to the 'Specialty' page
-        history('/Specialty');
+        history('/Specialty'); 
       } catch (err) {
         alert(err.message);
       }
@@ -56,23 +59,22 @@ function SignUpForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <label htmlFor="password">Password</label>
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
+      <ConfirmPassword
+        confirmPassword={confirmPassword}
+        setConfirmPassword={setConfirmPassword}
+        titleInput1="Password"
+        titleInput2="Confirm Password"
+        setPasswordError={setPasswordError}
+        setIsPasswordMatch={setIsPasswordMatch}
+        password={password}
+        confirmPasswordValue={confirmPassword}
+        setPasswordValue={setPassword}
+        setConfirmPasswordValue={setConfirmPassword}
       />
-      <label htmlFor="confirmPassword">Confirm Password</label>
-      <input
-        type="password"
-        name="confirmPassword"
-        placeholder="Confirm Password"
-        value={confirmPassword}
-        onChange={(e) => setConfirmPassword(e.target.value)}
-      />
-      <button className ="bun" onClick={handleSignUp}>Sign Up</button>
+      {passwordError && <div className="error-message">{passwordError}</div>}
+      <button className="bun" onClick={handleSignUp}>
+        Sign Up
+      </button>
     </div>
   );
 }

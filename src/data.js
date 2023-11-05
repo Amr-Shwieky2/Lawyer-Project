@@ -60,4 +60,19 @@ export const inputFields = [
   { name: 'Website', placeholder: 'Website', type: 'text' },
 ];
 
+export const formFields = [
+  { name: 'name', placeholder: 'Name' },
+  { name: 'email', placeholder: 'Email Address' },
+  { name: 'contactNumber', placeholder: 'Contact Number' },
+  { name: 'subject', placeholder: 'Subject' },
+];
+
+export const initialFormData = {
+  name: '',
+  email: '',
+  contactNumber: '',
+  subject: '',
+  description: '',
+};
+
 

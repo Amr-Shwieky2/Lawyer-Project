@@ -1,7 +1,8 @@
 import React from 'react';
 import "../pages/style/Home.css";
+import "./style/HeroSection.css"
 
-function LawyerItem({ OfficeName, Address, specialty, Experience }) {
+function LawyerItem({ OfficeName, Address, specialty, Experience, email, setShowRequest }) {
   return (
     <>
       <div className="card">
@@ -11,7 +12,8 @@ function LawyerItem({ OfficeName, Address, specialty, Experience }) {
         {specialty && specialty.map((category) => (
           <h5 key={category}>{category}</h5>
         ))}
-        <h5>Experience:{Experience}</h5>
+        <h5>Experience: {Experience}</h5>
+        <button className ='home-btn' onClick={() => setShowRequest(email)}>Request Callback</button>
       </div>
     </>
   );

@@ -41,7 +41,7 @@
     color: #333;
   }
   
-  .input {
+  .password input {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid var(--main-color);

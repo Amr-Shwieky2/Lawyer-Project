@@ -1,65 +1,76 @@
-import { collection, getDocs } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../config/firebase-config';
 import { Services } from '../data';
 import List from '../components/List';
-import { db } from '../config/firebase-config';
 import Categories from '../components/Categories';
-import "./style/Specialty.css"
+import CallbackForm from '../components/CallbackForm';
+import './style/Specialty.css';
+
 const allCategories = ['all', ...Services.data.map((item) => item.category)];
 
 function Customer() {
-    const ApprovedRef = collection(db, 'ApprovedOnSite');
-    const [ListItems, setListItems] = useState([]); // This is the data coming from Firebase
-    const [ListLawyers, setListLawyers] = useState(ListItems); // This is the data that you want to filter
-    const [categories, setCategories] = useState(allCategories); 
+  // State
+  const [listItems, setListItems] = useState([]);
+  const [listLawyers, setListLawyers] = useState(listItems);
+  const [categories, setCategories] = useState(allCategories);
+  const [showRequest, setShowRequest] = useState(null);
 
-    useEffect(() => {
-        const getCallbackData = async () => {
-            try {
-                const tempData = await getDocs(ApprovedRef);
-                setListItems(tempData.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  // Firestore reference
+  const approvedRef = collection(db, 'ApprovedOnSite');
 
-            } catch (error) {
-                console.error('Error fetching data from Firebase:', error);
-            }
-        };
-
-        getCallbackData();
-        
-    }, []);
-
-    const filterItems = (category) => {
-        if (category === 'all') {
-            setListLawyers(ListItems);
-
-        } else {
-            const newItems = LawyersByCategory(category);
-            setListLawyers(newItems);
-        }
+  // Fetch data from Firebase
+  useEffect(() => {
+    const getCallbackData = async () => {
+      try {
+        const tempData = await getDocs(approvedRef);
+        setListItems(tempData.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      } catch (error) {
+        console.error('Error fetching data from Firebase:', error);
+      }
     };
 
-    const LawyersByCategory = (category) => {
-        const newList = [];
-        for (let i = 0; i < ListItems.length; i++) {
-            for (let j = 0; j < ListItems[i].specialty.length; j++) {
-                if (category === ListItems[i].specialty[j]) {
-                    newList.push(ListItems[i]);
-                    break; 
-                }
-            }
-        }
-        return newList;
-    }
+    getCallbackData();
+  }, [approvedRef]);
 
-    return (
-        <>
-            <div className='Lawyer-inf'>
-                <Categories categories={categories} filterItems={filterItems}/>
-                <List items={ListLawyers}/>
-            </div>
-            
-        </>
-    );
+  // Filter items by category
+  const filterItems = (category) => {
+    if (category === 'all') {
+      setListLawyers(listItems);
+    } else {
+      const newItems = lawyersByCategory(category);
+      setListLawyers(newItems);
+    }
+  };
+
+  // Filter lawyers by category
+  const lawyersByCategory = (category) => {
+    const newList = [];
+    for (let i = 0; i < listItems.length; i++) {
+      for (let j = 0; j < listItems[i].specialty.length; j++) {
+        if (category === listItems[i].specialty[j]) {
+          newList.push(listItems[i]);
+          break;
+        }
+      }
+    }
+    return newList;
+  };
+
+  return (
+    <>
+      {showRequest ? (
+        <div className='Lawyer-inf'>
+          <CallbackForm user={showRequest} />
+        </div>
+      ) : (
+        <div className='Lawyer-inf'>
+          <Categories categories={categories} filterItems={filterItems} />
+          <List items={listLawyers} setShowRequest={setShowRequest} />
+        </div>
+      )}
+    </>
+  );
 }
 
 export default Customer;

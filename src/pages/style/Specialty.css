@@ -38,6 +38,8 @@
 
 .specialty-group {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .specialty-group input, .specialty-form textarea {
@@ -52,6 +54,7 @@
 .specialty-group input{
   box-sizing: border-box;
   height: 40px; 
+  
 }
 
 .specialty-group textarea {
