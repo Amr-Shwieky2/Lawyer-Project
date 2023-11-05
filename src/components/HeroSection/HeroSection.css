@@ -1,7 +1,4 @@
-:root {
-  --main-color: #9c8a24; /* Define the color variable */
-  --main-white: #fff; /* Define the white color variable */
-}
+
 
 #main {
   background-image: url("../../../public/image/background.jpg");

@@ -2,6 +2,7 @@ import React from 'react';
 import "../HeroSection/HeroSection.css"
 
 
+
 const Categories = ({ categories, filterItems }) => {
   return (
     <div className='btn-container'>

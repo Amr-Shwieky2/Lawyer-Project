@@ -3,6 +3,8 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../config/firebase-config';
 import { Services } from '../../data';
 import '../Specialty/Specialty.css';
+import '../Home/Home.css';
+import './Customer.css'
 import CallbackForm from './../../components/CallbackForm/CallbackForm';
 import Categories from './../../components/Categories/Categories';
 import List from './../../components/List/List';
@@ -33,6 +35,10 @@ function Customer() {
     getCallbackData();
   }, [approvedRef]);
 
+  useEffect(() => {
+    setListLawyers(listItems);
+  }, [listItems]);
+
   // Filter items by category
   const filterItems = (category) => {
     if (category === 'all') {
@@ -60,12 +66,15 @@ function Customer() {
   return (
     <>
       {showRequest ? (
-        <div className='Lawyer-inf'>
-          <CallbackForm user={showRequest} />
-        </div>
+          <div className='request-container'>
+            <div className='Lawyer-inf'>
+            <h1 className="center">WRITE YOUR INFORMATION FOR THE LAWYER</h1>
+              <CallbackForm user={showRequest} />
+            </div>
+          </div>
       ) : (
         <div className='Lawyer-inf'>
-          <Categories categories={categories} filterItems={filterItems} />
+          <div className='center'><Categories categories={categories} filterItems={filterItems} /></div>
           <List items={listLawyers} setShowRequest={setShowRequest} />
         </div>
       )}

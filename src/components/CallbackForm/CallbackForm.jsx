@@ -4,11 +4,13 @@ import { collection, addDoc } from 'firebase/firestore';
 import { initialFormData } from '../../data.js';
 import './CallbackForm.css';
 import '../HeroSection/HeroSection.css';
+import { useNavigate } from 'react-router-dom';
 
 function CallbackForm({user}) {
   const [formData, setFormData] = useState(initialFormData);
   const CallbackDataRef = collection(db, 'Callback');
   const RequestLawyerDataRef = collection(db, 'RequestLawyer');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,6 +36,7 @@ function CallbackForm({user}) {
           contactNumber: Number(formData.contactNumber),
           LawyerEmail: user,
         });
+        navigate('/');
       }
 
       // Clear the form fields after submission
