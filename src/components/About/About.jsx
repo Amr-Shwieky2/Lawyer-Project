@@ -1,9 +1,9 @@
 import React from 'react';
 import "./About.css";
 import "../../pages/Home/Home.css";
+import { Link } from 'react-router-dom';
 import { BiColumns, BiSolidLandmark } from "react-icons/bi";
 import { GoCodeOfConduct, GoPerson } from "react-icons/go";
-import { Link } from 'react-router-dom';
 
 const data = [
   {

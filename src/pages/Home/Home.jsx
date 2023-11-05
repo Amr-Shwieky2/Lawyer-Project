@@ -6,9 +6,6 @@ import About from './../../components/About/About';
 import Blog from './../../components/Blog/Blog';
 import Footer from './../../components/Footer/Footer';
 
-
-
-
 function Home() {
   return (
     <>

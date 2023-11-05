@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Services,  inputFields } from '../../data';
+import '../../pages/Home/Home.css';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../../config/firebase-config';
 import { collection, addDoc } from 'firebase/firestore';

@@ -75,4 +75,28 @@ export const initialFormData = {
   description: '',
 };
 
+// import { BiColumns, BiSolidLandmark } from "react-icons/bi";
+// import { GoCodeOfConduct, GoPerson } from "react-icons/go";
 
+// export const iconData = [
+//   {
+//     icon: <BiColumns />,
+//     count: 2286,
+//     label: "Solved cases",
+//   },
+//   {
+//     icon: <GoPerson />,
+//     count: 20,
+//     label: "Staff Members",
+//   },
+//   {
+//     icon: <BiSolidLandmark />,
+//     count: 15,
+//     label: "Partners Linked",
+//   },
+//   {
+//     icon: <GoCodeOfConduct />,
+//     count: 2500,
+//     label: "Happy Clients",
+//   },
+// ];
