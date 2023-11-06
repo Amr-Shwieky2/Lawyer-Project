@@ -11,8 +11,10 @@ export function useUserData() {
 
   const usersRef = collection(db, 'users');
 
+  const makeFirstLetterLowerCase = (string) => {
+    return string.charAt(0).toLowerCase() + string.slice(1);
+  };
   
-
   useEffect(() => {
 
     const findUser = ((usersData) => {
@@ -22,12 +24,10 @@ export function useUserData() {
           return usersData[i].username;
         }
       }
-      return '';
+      return ''
   })
 
-  const makeFirstLetterLowerCase = (string) => {
-    return string.charAt(0).toLowerCase() + string.slice(1);
-  };
+  
 
     const fetchData = async () => {
       const unsubscribe = auth.onAuthStateChanged(async (authUser) => {

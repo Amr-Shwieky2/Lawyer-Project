@@ -75,6 +75,7 @@ function Admin() {
           </div>
         ))}
       </div>
+
       <h1 className="center title">The New Lawyers</h1>
       <div className="cards">
         {LawyerData.map((lawyer) => (
@@ -103,6 +104,7 @@ function Admin() {
           </div>
         ))}
       </div>
+      
       <h1 className="center title">Lawyers on the Site</h1>
       <div className="cards">
         {ApprovedData.map((lawyer) => (

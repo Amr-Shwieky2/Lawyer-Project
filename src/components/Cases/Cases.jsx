@@ -15,9 +15,9 @@ function Cases() {
               <h2>{service.title}</h2>
               <p>{service.description}</p>
               <Link to="/">
-                <h5 className="btn-gld">
+                <h4 className="btn-gld">
                   KNOW MORE <i className="fas fa-chevron-right"></i>
-                </h5>
+                </h4>
               </Link>
             </div>
           ))}

@@ -40,9 +40,9 @@ function About() {
               AT GOLDENBLATT, WE'RE DRIVEN BY THE SHARED VISION OF SUCCESS, NOT FEES.
             </h1>
             <Link style={{ textDecoration: "none" }} to="/">
-              <h5 className="btn-gld">
+              <h4 className="btn-gld">
                 KNOW MORE <i className="fas fa-chevron-right"></i> 
-              </h5>
+              </h4>
             </Link>
           </div>
         </div>
