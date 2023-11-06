@@ -68,7 +68,7 @@ function Customer() {
       {showRequest ? (
           <div className='request-container'>
             <div className='Lawyer-inf'>
-            <h1 className="center">WRITE YOUR INFORMATION FOR THE LAWYER</h1>
+              <h1 className="center">WRITE YOUR INFORMATION FOR THE LAWYER</h1>
               <CallbackForm user={showRequest} />
             </div>
           </div>
