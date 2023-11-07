@@ -5,7 +5,7 @@ export const Services =
             id: 1,
             title: 'CORPORATE LAW',
             description: 'Corporate law governs business structures, governance, and compliance with regulations, crucial for the legal operation and success of companies.',
-            image: '../public/image/CORPORATE_LAW.jpg',
+            image: '/image/CORPORATE_LAW.jpg',
             category:"Corporate Law"
         },
 
@@ -13,7 +13,7 @@ export const Services =
             id: 2,
             title: 'TORT LAW', 
             description: 'Tort law deals with civil wrongs and personal injuries, providing legal remedies and compensation for those harmed by the wrongful actions or negligence of others.', 
-            image: '../public/image/TORT_LAW.jpg',
+            image: '/image/TORT_LAW.jpg',
             category:"Tort Law" 
         },
 
@@ -21,7 +21,7 @@ export const Services =
             id: 3, 
             title: 'FAMILY LAW', 
             description: 'Family law focuses on legal matters within family relationships, such as divorce, custody, and support, guiding resolution and family stability.', 
-            image: '../public/image/FAMILY_LAW.jpg',
+            image: '/image/FAMILY_LAW.jpg',
             category:"Family Law" 
         },
         
