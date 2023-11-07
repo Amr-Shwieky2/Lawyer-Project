@@ -32,22 +32,22 @@ export const teamData = [
   {
     role: "FOUNDER",
     name: "EMMA LAWRENCE",
-    image: "../public/image/lawyers/lawyer1.jpg",
+    image: "/image/lawyers/lawyer1.jpg",
   },
   {
     role: "CO-FOUNDER",
     name: "OLIVIA LAWRENCE",
-    image: "../public/image/lawyers/lawyer2.jpg",
+    image: "/image/lawyers/lawyer2.jpg",
   },
   {
     role: "CIVIL ATTORNEY",
     name: "AVA SHAW",
-    image: "../public/image/lawyers/lawyer3.jpg",
+    image: "/image/lawyers/lawyer3.jpg",
   },
   {
     role: "CORPORATE LAWYER",
     name: "ISABELLA ANDERSON",
-    image: "../public/image/lawyers/lawyer4.jpg",
+    image: "/image/lawyers/lawyer4.jpg",
   },
 ];
 

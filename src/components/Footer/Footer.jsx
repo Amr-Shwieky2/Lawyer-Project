@@ -19,7 +19,7 @@ function Footer() {
     <footer id='contact' className="footer bg-dark">
         
             <div className="box">
-                <img src='../../../public/image/logo.png' className='logo'/>
+                <img src='/image/logo.png' className='logo'/>
             </div>
             <div className="box box2">
                 <h1>Request a Free Call Back</h1>
