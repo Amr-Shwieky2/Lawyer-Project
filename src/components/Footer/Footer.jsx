@@ -7,7 +7,7 @@ import { AiOutlineInstagram,
 
 import { FiFacebook } from "react-icons/fi"
 import { FaLocationDot } from "react-icons/fa6"
-import { LuPhoneIncoming } from "react-icons/Lu"
+// import { LuPhoneIncoming } from "react-icons/Lu"
 import "../layout/style.css"
 
 function Footer() {
@@ -30,7 +30,7 @@ function Footer() {
               <div>
                 <h3>GET IN TOUCH</h3>
                 <p><FaLocationDot/> <span>22 Iconic Business Hub, NY 10202</span></p>
-                <p><LuPhoneIncoming/> <span>1800 00 0088</span></p>
+                {/* <p><LuPhoneIncoming/> <span>1800 00 0088</span></p> */}
                 <p><AiOutlineMail/> <span>info@lawdesk.com</span></p>
               </div>
               <div>
