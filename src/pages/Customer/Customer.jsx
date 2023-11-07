@@ -39,15 +39,37 @@ function Customer() {
     setListLawyers(listItems);
   }, [listItems]);
 
-  // Filter items by category
-  const filterItems = (category) => {
-    if (category === 'all') {
-      setListLawyers(listItems);
-    } else {
-      const newItems = listItems.filter((item) => item.category === category);
-      setListLawyers(newItems);
-    }
-  };
+    // Filter items by category
+    const filterItems = (category) => {
+      console.log(category);
+      if (category === 'all') {
+        setListLawyers(listItems);
+      } else {
+        const newItems = lawyersByCategory(category);
+        setListLawyers(newItems);
+      }
+    };
+  
+    // Filter lawyers by category
+    const lawyersByCategory = (category) => {
+      const newList = [];
+      // console.log(category);
+      for (let i = 0; i < listItems.length; i++) {
+        for (let j = 0; j < listItems[i].specialty.length; j++) {
+          // console.log(listItems[i].specialty[j]);
+          if (category === listItems[i].specialty[j]) {
+            // console.log(listItems[i]);
+            newList.push(listItems[i]);
+            break;
+          }
+        }
+      }
+      if(newList){
+        return newList;
+      }else{
+        return [];
+      }
+    };
 
   return (
     <>
