@@ -5,23 +5,24 @@ import SignUpForm from '../../components/SignUp/SignUp';
 import ToggleForm from '../../components/ToggleForm/ToggleForm'; 
 
 function LogIn() {
-  const [login, setLogin] = useState(true);
+  const [account, setAccount] = useState(true);
   
 
   return (
     <div className="LogIn-page">
-      
-        <form className="login-form">
-          
-            {login ? (
-              <SignInForm />
-            ) : (
-              <SignUpForm />
-            )}
-            <ToggleForm login={login} setLogin={setLogin} />
-          
-        </form>
-      
+      <div className='title-login'>
+        <h1>IF YOU ARE A LAWYER, YOU SHOULD HAVE AN ACCOUNT</h1>
+      </div>
+      <form className="login-form">
+        
+          {account ? (
+            <SignInForm />
+          ) : (
+            <SignUpForm />
+          )}
+          <ToggleForm login={account} setLogin={setAccount} />
+        
+      </form>
     </div>
   );
 }

@@ -14,7 +14,7 @@ const allCategories = ['all', ...Services.data.map((item) => item.category)];
 function Customer() {
   // State
   const [listItems, setListItems] = useState([]);
-  const [listLawyers, setListLawyers] = useState(listItems);
+  const [listLawyers, setListLawyers] = useState([]);
   const [categories, setCategories] = useState(allCategories);
   const [showRequest, setShowRequest] = useState(null);
 
@@ -33,7 +33,7 @@ function Customer() {
     };
 
     getCallbackData();
-  }, [approvedRef]);
+  }, [db]);
 
   useEffect(() => {
     setListLawyers(listItems);
@@ -44,37 +44,25 @@ function Customer() {
     if (category === 'all') {
       setListLawyers(listItems);
     } else {
-      const newItems = lawyersByCategory(category);
+      const newItems = listItems.filter((item) => item.category === category);
       setListLawyers(newItems);
     }
-  };
-
-  // Filter lawyers by category
-  const lawyersByCategory = (category) => {
-    const newList = [];
-    for (let i = 0; i < listItems.length; i++) {
-      for (let j = 0; j < listItems[i].specialty.length; j++) {
-        if (category === listItems[i].specialty[j]) {
-          newList.push(listItems[i]);
-          break;
-        }
-      }
-    }
-    return newList;
   };
 
   return (
     <>
       {showRequest ? (
           <div className='request-container'>
-            <div className='Lawyer-inf'>
+            <div className='Lawyer-info Lawyer-info1'>
               <h1 className="center">WRITE YOUR INFORMATION FOR THE LAWYER</h1>
               <CallbackForm user={showRequest} />
             </div>
           </div>
       ) : (
-        <div className='Lawyer-inf'>
-          <div className='center'><Categories categories={categories} filterItems={filterItems} /></div>
+        <div className='Lawyer-info'>
+          <div className='center'>
+            <Categories categories={categories} filterItems={filterItems} />
+          </div>
           <List items={listLawyers} setShowRequest={setShowRequest} />
         </div>
       )}

@@ -1,5 +1,6 @@
 import React from 'react';
 import ConfirmPassword from '../ConfirmPassword/ConfirmPassword';
+import '../../pages/Dashboard/Dashboard.css'
 
 function PasswordSection({
   confirmPassword,
@@ -23,7 +24,7 @@ function PasswordSection({
         setIsPasswordMatch={setIsPasswordMatch}
       />
       {passwordError && <div className="error-message">{passwordError}</div>}
-      <button className="home-btn" onClick={handleChangePassword}>
+      <button className="dashboard-btn" onClick={handleChangePassword}>
         Change Password
       </button>
     </div>

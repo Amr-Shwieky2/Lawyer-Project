@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import '../../pages/Dashboard/Dashboard.css'
 
 function ConfirmPassword({
   confirmPassword,
@@ -23,8 +24,8 @@ function ConfirmPassword({
   }, [password, confirmPasswordValue, setIsPasswordMatch, setPasswordError]);
 
   return (
-    <div>
-      <label htmlFor="password">{titleInput1}</label>
+    <div className='confirmPassword-dash'>
+      <label htmlFor="password" className='label-password'>{titleInput1}</label>
       <input
         type="password"
         name="password"
@@ -32,7 +33,7 @@ function ConfirmPassword({
         value={password}
         onChange={(e) => setPasswordValue(e.target.value)}
       />
-      <label htmlFor="confirmPassword">{titleInput2}</label>
+      <label htmlFor="confirmPassword" className='label-password' >{titleInput2}</label>
       <input
         type="password"
         name="confirmPassword"

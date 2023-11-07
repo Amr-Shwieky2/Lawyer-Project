@@ -1,60 +1,130 @@
-/* Dashboard.css */
+.hero{
+  display: flex;
+  margin-top: 8%;
+  height: 70vh;
+}
 
-:root {
-    --main-color: #9c8a24; /* Define the color variable */
-    --main-white: #fff; /* Define the white color variable */
-  }
-  
-  .container {
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url("../../../public/image/Dashboard.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 20px;
-    
-  }
-  
-  .side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(3, 3, 3, 0.551);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-  }
-  
-  .title {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 20px 0;
-    color: var(--main-color);
-  }
-  
-  .greeting {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .password input {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid var(--main-color);
-    border-radius: 5px;
-    width: 100%;
-    max-width: 300px;
-    height: 20px;
-  }
-  
-  .btn {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
-  
+.data{
+  width: 80%;
+  height: 70vh;
+}
+
+.container-dash{
+  width: 20%;
+  height: 70vh;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(239, 210, 44, 0.2);
+}
+
+.title-dash {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: var(--main-color);
+}
+.password{
+   /* height: 25vh;
+   margin-top: -12%; */
+   width: 20vw;
+}
+.password input {
+  padding: 10px;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  width: 70%;
+  max-width: 300px;
+  height: 20px;
+  margin-left: 10%;
+  background-color: transparent;
+
+  /* align-items: center; */
+}
+.confirmPassword-dash{
+  display: flex;
+  flex-direction: column;
+}
+.label-password{
+  color: var(--main-white);
+  font-size: 18px;
+  /* padding: 15px; */
+
+}
+
+
+.dashboard-btn {
+  background-color: transparent;
+  border: 3px solid var(--main-color);
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+  color: var(--main-white);
+  margin-bottom: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dashboard-btn a {
+  display: block;
+  color: var(--main-white);
+  text-decoration: none;
+}
+
+.dashboard-btn:hover {
+  border-color: var(--main-white); 
+  color: var(--main-color);
+}
+
+.dashboard-btn:hover a {
+  color:var(--main-color);
+  text-decoration: none;
+}
+.dash-admin{
+  display: flex;
+  flex-direction: column;
+  width: 79%;
+}
+
+
+
+.option-button-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.active-button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.inactive-button {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.inactive-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}

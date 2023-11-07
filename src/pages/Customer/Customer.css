@@ -12,6 +12,12 @@
    
 }  
 
-.Lawyer-inf{
-  margin-top: 20%;
+.Lawyer-info{
+  height: 60%;
+  margin-top: 100px;
+  color: var(--main-color);
+}
+
+.Lawyer-info1{
+  margin-top: 22%;
 }

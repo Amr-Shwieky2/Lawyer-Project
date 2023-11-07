@@ -55,7 +55,7 @@ function Admin() {
 
   return (
     <>
-      <h1 className="center title">Free Callback</h1>
+      <h1 className="center title-dash">Free Callback</h1>
       <div className="cards">
         {callbackData.map((callback) => (
           <div className="card" key={callback.id}>
@@ -70,13 +70,13 @@ function Admin() {
                 deleteCallback(callback.id);
               }}
             >
-              Delete
+              Done
             </button>
           </div>
         ))}
       </div>
 
-      <h1 className="center title">The New Lawyers</h1>
+      <h1 className="center title-dash">The New Lawyers</h1>
       <div className="cards">
         {LawyerData.map((lawyer) => (
           <div className="card" key={lawyer.id}>
@@ -105,7 +105,7 @@ function Admin() {
         ))}
       </div>
       
-      <h1 className="center title">Lawyers on the Site</h1>
+      <h1 className="center title-dash">Lawyers on the Site</h1>
       <div className="cards">
         {ApprovedData.map((lawyer) => (
           <div className="card" key={lawyer.id}>
