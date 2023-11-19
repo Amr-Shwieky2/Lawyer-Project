@@ -1,18 +1,28 @@
 import React from 'react';
-import "../../pages/Home/Home.css";
-import LawyerItem from './../LawyerItem/LawyerItem';
+import './List.css'; 
+import LawyerItem from '../LawyerItem/LawyerItem';
 
 function List({ items, setShowRequest }) {
   return (
-    <div>
-      <div className='cards'>
-        {items && items.map((Item) => (
-          <LawyerItem key={Item.id} {...Item} setShowRequest={setShowRequest} />
-        ))}
-      </div>
+    <div className="lawyer-list">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Specialties</th>
+            <th>Experience</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items && items.map((item) => (
+            <LawyerItem key={item.id} {...item} setShowRequest={setShowRequest} />
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
-
 
 export default List;

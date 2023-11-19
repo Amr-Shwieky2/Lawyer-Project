@@ -1,21 +1,22 @@
 import React from 'react';
-import "../../pages/Home/Home.css";
 import "../HeroSection/HeroSection.css"
+import './LawyerItem.css'; 
 
 function LawyerItem({ OfficeName, Address, specialty, Experience, email, setShowRequest }) {
   return (
-    <>
-      <div className="card">
-        <h2>Name: {OfficeName}</h2>
-        <h4>Address: {Address}</h4>
-        <h4>SPECIALTY OF THE LAWYER :</h4>
+    <tr>
+      <td>{OfficeName}</td>
+      <td>{Address}</td>
+      <td>
         {specialty && specialty.map((category) => (
-          <h5 key={category}>{category}</h5>
+          <span key={category}>{category}</span>
         ))}
-        <h5>Experience: {Experience}</h5>
-        <button className ='home-btn' onClick={() => setShowRequest(email)}>Request Callback</button>
-      </div>
-    </>
+      </td>
+      <td>{Experience}</td>
+      <td>
+        <button className='home-btn' onClick={() => setShowRequest(email)}>Request Callback</button>
+      </td>
+    </tr>
   );
 }
 

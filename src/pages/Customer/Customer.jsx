@@ -53,12 +53,10 @@ function Customer() {
     // Filter lawyers by category
     const lawyersByCategory = (category) => {
       const newList = [];
-      // console.log(category);
+      
       for (let i = 0; i < listItems.length; i++) {
         for (let j = 0; j < listItems[i].specialty.length; j++) {
-          // console.log(listItems[i].specialty[j]);
           if (category === listItems[i].specialty[j]) {
-            // console.log(listItems[i]);
             newList.push(listItems[i]);
             break;
           }
